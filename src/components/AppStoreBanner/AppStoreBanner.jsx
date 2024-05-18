@@ -26,10 +26,10 @@ const AppStoreBanner = () => {
             >
               Get Started with our app
             </h1>
-            <p data-aos="fade-up" className="text-center sm:px-20">
+            {/* <p data-aos="fade-up" className="text-center sm:px-20">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
               magnam harum accusantium odit?
-            </p>
+            </p> */}
             <div
               data-aos="fade-up"
               className="flex flex-wrap justify-center items-center gap-4"

@@ -21,8 +21,8 @@ const ResponsiveMenu = ({ showMenu }) => {
         </div>
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
-            {Navlinks.map((data) => (
-              <li>
+            {Navlinks.map((data, index) => (
+              <li key={index}> {/* Assign unique key to each li element */}
                 <a href={data.link} className="mb-5 inline-block">
                   {data.name}
                 </a>

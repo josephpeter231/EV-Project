@@ -1,56 +1,34 @@
-import React, { Component, useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
-// Component import
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Services from "./components/Services/Services";
-import CarList from "./components/CarList/CarList";
-import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner";
-import Contact from "./components/Contact/Contact";
-import Testimonial from "./components/Testimonial/Testimonial";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './App2';
+import Login from './components/Login/Login'
+import AdminMap from './components/AdminMap';
+import Register from './components/Login/Register'
+import UserMap from './components/UserMap'
+import UserBookings from './components/Bookings';
+import DeleteStation from './components/DeleteStation/DeleteStation';
+import MyProfile from './components/MyProfile/MyProfile';
+import Help from './components/Help/Help';
 
+console.log()
 const App = () => {
-  // dark mode start
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
-  );
-  const element = document.documentElement;
-
-  useEffect(() => {
-    if (theme === "dark") {
-      element.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      element.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [theme]);
-  // dark mode end
-
-  React.useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 800,
-      easing: "ease-in-sine",
-      delay: 100,
-    });
-    AOS.refresh();
-  }, []);
   return (
-    <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
-      <Navbar theme={theme} setTheme={setTheme} />
-      <Hero theme={theme} />
-      <About />
-      <Services />
-      <CarList />
-      <Testimonial />
-      <AppStoreBanner />
-      <Contact />
-      <Footer />
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register/>} />
+          <Route exact path="/adminlogin" element={<Home />} /> 
+          <Route exact path="/adminmarking" element={<AdminMap />} /> 
+          <Route exact path="/usermap" element={<UserMap />} /> 
+          <Route exact path="/mybookings" element={<UserBookings />} /> 
+          <Route exact path="/delete-station" element={<DeleteStation />} />
+          <Route exact path="/myprofile" element={<MyProfile />} />
+          <Route exact path="/help" element={<Help />} />
+
+        </Routes>
+      </Router>
     </div>
   );
 };

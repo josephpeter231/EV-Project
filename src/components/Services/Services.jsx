@@ -10,7 +10,7 @@ const skillsData = [
       <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Pure Power, Pure Pleasure.",
     aosDelay: "0",
   },
   {
@@ -19,16 +19,16 @@ const skillsData = [
       <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Your Horse Power, Now Electric",
     aosDelay: "500",
   },
   {
-    name: "Experience Drivers",
+    name: "Convenient Booking",
     icon: (
       <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
     ),
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Your Sustainable Journey Starts Here.",
     aosDelay: "1000",
   },
 ];
@@ -57,12 +57,12 @@ const Services = () => {
                 <div className="grid place-items-center">{skill.icon}</div>
                 <h1 className="text-2xl font-bold">{skill.name}</h1>
                 <p>{skill.description}</p>
-                <a
+                {/* <a
                   href={skill.link}
                   className="inline-block text-lg font-semibold py-3 text-primary group-hover:text-black duration-300"
                 >
                   Learn more
-                </a>
+                </a> */}
               </div>
             ))}
           </div>

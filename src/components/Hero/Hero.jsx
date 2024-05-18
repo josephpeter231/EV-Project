@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, } from "react";
 import carPng from "../../assets/car.png";
-import yellowCar from "../../assets/banner-car.png";
+import yellowCar from "../../assets/EV-ux.png";
 import AOS from "aos";
 
 const Hero = ({ theme }) => {
@@ -32,22 +32,26 @@ const Hero = ({ theme }) => {
               data-aos-delay="600"
               className="text-5xl lg:text-7xl font-semibold font-serif"
             >
-              Car Rental
+              Volt Spot
             </h1>
             <p data-aos="fade-up" data-aos-delay="1000">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              veritatis explicabo quibusdam quae reprehenderit ab{" "}
+            Streamlined Electric Vehicle Charging Station Location and Reservering the Slot{" "}
             </p>
-            <button
-              data-aos="fade-up"
-              data-aos-delay="1500"
-              onClick={() => {
-                AOS.refreshHard();
-              }}
-              className="rounded-md bg-primary hover:bg-primary/80 transition duration-500 py-2 px-6 text-black"
-            >
-              Get Started
-            </button>
+
+            <br/>
+            <a href="/login">
+              <button
+                data-aos="fade-up"
+                data-aos-delay="1500"
+                onClick={() => {
+                  AOS.refreshHard();
+                }}
+                className="rounded-md bg-primary hover:bg-primary/80 transition duration-500 py-2 px-6 text-black"
+              >
+                Get Started
+              </button>
+            </a>
+
           </div>
         </div>
       </div>

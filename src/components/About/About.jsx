@@ -22,16 +22,14 @@ const About = () => {
                 About us
               </h1>
               <p data-aos="fade-up" className="leading-8 tracking-wide">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, magnam! Tenetur odio quo et maxime?
+              Our platform is designed to streamline the management of electric vehicle (EV) charging stations, making it easier for both station owners and users to monitor, control, and optimize their charging experiences.
               </p>
-              <p data-aos="fade-up">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-                tempora.
-              </p>
-              <button data-aos="fade-up" className="button-outline">
-                Get Started
-              </button>
+              <br />
+              <a href="/login">
+                <button data-aos="fade-up" className="button-outline">
+                  Get Started
+                </button>
+              </a>
             </div>
           </div>
         </div>

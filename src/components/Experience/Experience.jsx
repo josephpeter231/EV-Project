@@ -1,5 +1,3 @@
-import React from "react";
-
 const Experience = () => {
   return (
     <div className="dark:bg-black text-white dark:text-white py-14">
