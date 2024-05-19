@@ -112,7 +112,7 @@ const MapIntegration = () => {
       setMyLocation({ latitude, longitude });
 
       const myIcon = L.icon({
-        iconUrl: 'https://cdn.pixabay.com/photo/2014/04/03/10/03/google-309740_1280.png',
+        iconUrl: '../assets/marker.jpg',
         iconSize: [25, 41],
         iconAnchor: [12, 41]
       });
