@@ -112,7 +112,7 @@ const MapIntegration = () => {
       setMyLocation({ latitude, longitude });
 
       const myIcon = L.icon({
-        iconUrl: '../assets/marker.jpg',
+        iconUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROGRvCr4nBwXxZAyYEmdfCevT5jxB4GhEfrw&s',
         iconSize: [25, 41],
         iconAnchor: [12, 41]
       });
