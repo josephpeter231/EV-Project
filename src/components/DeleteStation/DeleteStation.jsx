@@ -8,7 +8,7 @@ const DeleteStation = () => {
 
   useEffect(() => {
     // Fetch station names from backend when component mounts
-    axios.get('http://localhost:3000/api/chargingstations')
+    axios.get('https://ev-project-backend.onrender.com/api/chargingstations')
       .then(response => {
         const stations = response.data;
         setStationNames(stations.map(station => station.stationName));
@@ -19,7 +19,7 @@ const DeleteStation = () => {
   }, []);
 
   const fetchStationNames = () => {
-    axios.get('http://localhost:3000/api/chargingstations')
+    axios.get('https://ev-project-backend.onrender.com/api/chargingstations')
       .then(response => {
         const stations = response.data;
         setStationNames(stations.map(station => station.stationName));
@@ -40,7 +40,7 @@ const DeleteStation = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Implement deletion logic here
-        axios.delete(`http://localhost:3000/api/chargingstations/${selectedStation}`)
+        axios.delete(`https://ev-project-backend.onrender.com/api/chargingstations/${selectedStation}`)
           .then(response => {
             console.log('Station deleted successfully:', response.data);
             // Update the list of station names after deletion

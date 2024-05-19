@@ -31,7 +31,7 @@ const MapIntegration = () => {
       });
     };
 
-    axios.get('http://localhost:3000/api/chargingstations')
+    axios.get('https://ev-project-backend.onrender.com/api/chargingstations')
       .then(response => {
         const stations = response.data;
         setChargingStations(stations);
@@ -49,7 +49,7 @@ const MapIntegration = () => {
             .bindPopup(`Station Name: ${stationName}<br>Charger Type: ${selectedChargerType}`)
             .openPopup();
 
-          axios.post('http://localhost:3000/api/chargingstations', {
+          axios.post('https://ev-project-backend.onrender.com/api/chargingstations', {
             chargerType: selectedChargerType,
             stationName: stationName,
             latitude: e.latlng.lat,

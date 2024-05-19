@@ -13,7 +13,7 @@ const MyProfile = () => {
     }, []);
 
     const fetchUserDetails = () => {
-      axios.get(`http://localhost:3000/api/users/${userId}`)
+      axios.get(`https://ev-project-backend.onrender.com/api/users/${userId}`)
         .then(response => {
           setUser(response.data);
         })
@@ -28,7 +28,7 @@ const MyProfile = () => {
 
     const handleSave = async (updatedUser) => {
       try {
-        const response = await axios.put(`http://localhost:3000/api/users/${userId}`, updatedUser);
+        const response = await axios.put(`https://ev-project-backend.onrender.com/api/users/${userId}`, updatedUser);
         setUser(response.data.user);
         setEditing(false); // Deactivate editing mode
       } catch (error) {

@@ -37,7 +37,7 @@ const MapIntegration = () => {
   // Auto-cancellation of slots
   const cancelSlot = () => {
     // eslint-disable-next-line no-undef
-    axios.delete(`http://localhost:3000/api/bookings/${bookingId}`)
+    axios.delete(`https://ev-project-backend.onrender.com/api/bookings/${bookingId}`)
       .then(response => {
         console.log("Slot cancelled successfully:", response.data);
       })
@@ -79,7 +79,7 @@ const MapIntegration = () => {
   }, [nearestStation, bookingTime]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/chargingstations')
+    axios.get('https://ev-project-backend.onrender.com/api/chargingstations')
       .then(response => {
         const stations = response.data;
         setChargingStations(stations);
@@ -177,7 +177,7 @@ const MapIntegration = () => {
     const nearest = findNearestChargingStation(myLocation);
     if (nearest) {
       // Check if the selected time slot is available at the nearest station
-      axios.get(`http://localhost:3000/allbookings?stationName=${nearest.stationName}&chargingSlot=${selectedTimeSlot}`)
+      axios.get(`https://ev-project-backend.onrender.com/allbookings?stationName=${nearest.stationName}&chargingSlot=${selectedTimeSlot}`)
         .then(response => {
           console.log(response.data.message)
           // If there are no existing bookings for the selected time slot, allow booking
@@ -232,7 +232,7 @@ const MapIntegration = () => {
     console.log(bookingData);
   
     // Send booking data to the backend endpoint
-    axios.post('http://localhost:3000/api/bookings', bookingData)
+    axios.post('https://ev-project-backend.onrender.com/api/bookings', bookingData)
       .then(response => {
         Swal.fire({
           title: "Make payment to Confirm Booking",

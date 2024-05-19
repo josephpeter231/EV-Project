@@ -96,7 +96,7 @@ const UserBookings = () => {
   }, []);
 
   const fetchBookings = () => {
-    axios.get(`http://localhost:3000/api/bookings/${userId}`)
+    axios.get(`https://ev-project-backend.onrender.com/api/bookings/${userId}`)
       .then(response => {
         setBookings(response.data);
       })
@@ -127,7 +127,7 @@ const UserBookings = () => {
   };
 
   const cancelBooking = (bookingId) => {
-    axios.delete(`http://localhost:3000/api/bookings/${bookingId}`)
+    axios.delete(`https://ev-project-backend.onrender.com/api/bookings/${bookingId}`)
       .then(response => {
         console.log("Booking canceled successfully");
         fetchBookings(); // Fetch updated list of bookings after cancellation
