@@ -16,7 +16,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/register', { firstName, lastName, email, password, contactNumber });
+            const response = await axios.post('https://ev-project-backend.onrender.com/register', { firstName, lastName, email, password, contactNumber });
             localStorage.setItem('token', response.data.token);
             Swal.fire({
                 title: "Registration Success!",
