@@ -41,21 +41,21 @@ const Footer = () => {
             <br />
             <div className="flex items-center gap-3">
               <FaLocationArrow />
-              <p>Bangalore, Karnataka</p>
+              <p>Chennai, TamilNadu</p>
             </div>
             <div className="flex items-center gap-3 mt-3">
               <FaMobileAlt />
-              <p>+91 9901999046</p>
+              <p>+91 8870310990</p>
             </div>
             {/* Social Handle */}
             <div className="flex items-center gap-3 mt-6">
-              <a href="https://www.instagram.com/_yashasbm?igsh=MWhweXh5a3p0aXIyNQ==">
+              <a href="#">
                 <FaInstagram className="text-3xl hover:text-primary duration-300" />
               </a>
-              <a href="https://www.facebook.com/vivek.gundi.1?mibextid=kFxxJD">
+              <a href="#">
                 <FaFacebook className="text-3xl hover:text-primary duration-300" />
               </a>
-              <a href="https://www.linkedin.com/in/shivshankar-hosamani-5b028721b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <a href="https://www.linkedin.com/in/josephpeter-j/">
                 <FaLinkedin className="text-3xl hover:text-primary duration-300" />
               </a>
             </div>
